@@ -30,13 +30,13 @@ public class ToolsService {
     }
 
     public ToolsResponse saveTools(Tools tools){
-        toolsRepository.save(tools);
+        Tools toolsSaved = toolsRepository.save(tools);
         ToolsResponse toolsResponse = new ToolsResponse(
-                tools.getId(),
-                tools.getTitulo(),
-                tools.getLink(),
-                tools.getDescricao(),
-                tools.getTags()
+                toolsSaved.getId(),
+                toolsSaved.getTitulo(),
+                toolsSaved.getLink(),
+                toolsSaved.getDescricao(),
+                toolsSaved.getTags()
         );
         return toolsResponse;
     }

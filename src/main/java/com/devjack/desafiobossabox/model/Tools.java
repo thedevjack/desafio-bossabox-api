@@ -31,4 +31,6 @@ public class Tools implements Serializable {
     private List<String> tags;
 
 
+    public Tools(String titulo, String descricao, String link, List<String> tags) {
+    }
 }
